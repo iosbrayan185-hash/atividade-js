@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="./imc.css">
+</head>
+<body>
+    <main class="calculadora">
+        <h1>Calculadora de IMC</h1>
+        <p class="introducao">Informe seu peso e sua altura para calcular o Índice de Massa Corporal.</p>
+
+        <form id="formulario-imc">
+            <label for="peso">Peso (kg)</label>
+            <input id="peso" name="peso" type="number" min="1" step="any" placeholder="Ex.: 70" required>
+
+            <label for="altura">Altura (cm)</label>
+            <input id="altura" name="altura" type="number" min="50" step="any" placeholder="Ex.: 170" required>
+
+            <button type="submit">Calcular IMC</button>
+        </form>
+
+        <section id="resultado" class="resultado" aria-live="polite" hidden>
+            <h2>Seu resultado</h2>
+            <p id="valor-imc"></p>
+            <p id="classificacao"></p>
+            <p id="faixa-peso"></p>
+        </section>
+
+        <p class="aviso">As faixas são referências para adultos. O IMC é uma estimativa e não substitui a avaliação de um profissional de saúde. Para crianças e adolescentes, a interpretação é diferente.</p>
+    </main>
+    <script src="./imc.js"></script>
+</body>
+</html>
